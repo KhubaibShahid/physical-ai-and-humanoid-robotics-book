@@ -2385,7 +2385,7 @@ This complete system enables humanoid robots to:
 
 Congratulations! You've completed the comprehensive guide to building intelligent humanoid robots with Vision-Language-Action systems. Your robot is now capable of understanding natural language commands, perceiving its environment, reasoning about tasks, and executing them safely.
 
-Continue to [Module 5: Advanced Topics](/docs/module-05-advanced-topics/) to explore cutting-edge developments in humanoid robotics, or begin deploying your system in real-world applications.
+You're now ready to deploy your system in real-world applications and explore cutting-edge developments in humanoid robotics on your own.
 
 ---
 
