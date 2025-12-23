@@ -1,0 +1,88 @@
+.integrationFlow {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.flowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.flowContainer.vertical {
+  flex-direction: column;
+}
+
+.flowContainer.horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.step {
+  padding: 1.25rem;
+  background: var(--ifm-color-primary-lightest);
+  border: 2px solid var(--ifm-color-primary-light);
+  border-radius: 8px;
+  text-align: center;
+  min-width: 200px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.module {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ifm-color-primary-darker);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.4;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.flowContainer.vertical .arrow {
+  margin: 0.5rem 0;
+}
+
+.flowContainer.horizontal .arrow {
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .flowContainer.horizontal {
+    flex-direction: column;
+  }
+
+  .flowContainer.horizontal .arrow {
+    transform: rotate(90deg);
+  }
+}

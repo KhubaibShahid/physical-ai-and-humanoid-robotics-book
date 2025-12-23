@@ -1,0 +1,10 @@
+{
+  "label": "Module 1: ROS 2",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Module 1: ROS 2 (Robotic Nervous System)",
+    "description": "Learn robot software communication and control with ROS 2. Understand nodes, topics, services, and URDF for humanoid robot control.",
+    "keywords": ["ros2", "robotics", "nodes", "topics", "urdf"]
+  }
+}

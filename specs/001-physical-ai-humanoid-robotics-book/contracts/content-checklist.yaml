@@ -1,0 +1,220 @@
+# Content Quality Validation Checklist
+# Per-Module validation for Physical AI & Humanoid Robotics book
+# Use this checklist to validate each module before marking complete
+
+checklist_version: "1.0.0"
+last_updated: "2025-12-22"
+
+# Module-Level Checks (apply to entire module)
+module_validation:
+  metadata:
+    - item: "Module has valid _category_.json"
+      description: "Category config file exists with correct label, position, and description"
+      required: true
+
+    - item: "Module contains 5-6 chapters"
+      description: "Standard modules have 5 chapters, Module 4 has 6 (includes capstone)"
+      required: true
+
+    - item: "Module directory follows naming convention"
+      description: "Format: module-{number}-{slug} (e.g., module-01-ros2)"
+      required: true
+
+  content_quality:
+    - item: "Self-contained and internally consistent"
+      description: "Module can be understood without external context beyond prerequisites"
+      required: true
+
+    - item: "Clear connection to next module"
+      description: "Integration chapter explains how concepts flow to subsequent module"
+      required: true
+
+    - item: "No undocumented or speculative features"
+      description: "All framework features verified against official documentation"
+      required: true
+
+    - item: "Terminology consistent with glossary"
+      description: "Technical terms match definitions in appendix/glossary.md"
+      required: true
+
+    - item: "Architecture alignment across modules"
+      description: "System architecture diagrams are compatible with other modules"
+      required: true
+
+# Chapter-Level Checks (apply to each chapter within module)
+chapter_validation:
+  frontmatter:
+    - item: "Valid frontmatter schema"
+      description: "Frontmatter validates against contracts/module-schema.yaml"
+      required: true
+
+    - item: "Unique chapter ID"
+      description: "ID matches file path and is unique across entire book"
+      required: true
+
+    - item: "Description is 120-160 characters"
+      description: "SEO and RAG-optimized description length"
+      required: true
+
+    - item: "3-7 keywords provided"
+      description: "Searchable keywords for content discovery"
+      required: true
+
+  content_structure:
+    - item: "Follows standard chapter type structure"
+      description: "Overview, Architecture, Tooling, Integration, or Summary format"
+      required: true
+
+    - item: "At least 2 sections (H2 headings)"
+      description: "Logical content subdivision for RAG chunking"
+      required: true
+
+    - item: "Sections are 300-800 words each"
+      description: "Optimal length for comprehension and RAG retrieval"
+      required: false
+      recommended: true
+
+  technical_accuracy:
+    - item: "All code examples are syntactically valid"
+      description: "Code has been tested or syntax-validated"
+      required: true
+
+    - item: "Every API reference links to official docs"
+      description: "Citations to ROS 2, Gazebo, Unity, Isaac, or other framework docs"
+      required: true
+
+    - item: "Architectural claims are cited or marked as synthesis"
+      description: "Design decisions reference official sources or clearly state original synthesis"
+      required: true
+
+    - item: "Framework features verified in current stable release"
+      description: "All features exist in pinned versions (ROS 2 Humble, Gazebo Fortress, etc.)"
+      required: true
+
+  visual_aids:
+    - item: "Diagrams have alt text (50-150 chars)"
+      description: "Accessibility and RAG-friendly image descriptions"
+      required: true
+
+    - item: "Diagrams follow consistent style"
+      description: "Color scheme, labeling, and complexity guidelines adhered to"
+      required: true
+
+    - item: "Mermaid diagrams use valid syntax"
+      description: "Mermaid code renders correctly in Docusaurus"
+      required: true
+
+# Code Example Checks (apply to each code snippet)
+code_example_validation:
+  - item: "Language specified"
+    description: "One of: python, cpp, yaml, xml, bash, javascript"
+    required: true
+
+  - item: "Framework specified"
+    description: "Which framework the code uses (ROS 2, Gazebo, Isaac, etc.)"
+    required: true
+
+  - item: "Code is complete and executable"
+    description: "Not pseudocode; can be run with appropriate setup"
+    required: true
+
+  - item: "Explanation provided"
+    description: "What the code does and why (1-3 sentences)"
+    required: true
+
+  - item: "Official docs link included"
+    description: "Link to API documentation for key functions/classes used"
+    required: true
+
+  - item: "Syntax validated"
+    description: "Code has been tested or linted for the target language"
+    required: true
+
+# Build & Deployment Checks (apply before publishing)
+build_validation:
+  - item: "Docusaurus build succeeds"
+    description: "npm run build completes without errors"
+    required: true
+
+  - item: "No broken internal links"
+    description: "All links to other chapters/sections resolve correctly"
+    required: true
+
+  - item: "No broken external links"
+    description: "All citations and references are accessible (within 6 months)"
+    required: true
+
+  - item: "MDX syntax valid"
+    description: "All MDX files parse correctly without syntax errors"
+    required: true
+
+  - item: "Mobile rendering validated"
+    description: "Content displays correctly on mobile devices (responsive)"
+    required: true
+
+# Integration Checks (Module 4 Capstone Specific)
+capstone_validation:
+  - item: "Voice → Plan → Navigate → Perceive → Act flow traceable"
+    description: "Can trace data flow from voice input through LLM planning to robot execution"
+    required: true
+
+  - item: "All four modules integrated"
+    description: "Capstone uses concepts from ROS 2, Simulation, Isaac, and VLA modules"
+    required: true
+
+  - item: "Working example provided"
+    description: "Complete, documented example of voice-commanded robot task"
+    required: true
+
+  - item: "Limitations clearly stated"
+    description: "Acknowledges gaps between example and production systems"
+    required: true
+
+# RAG Optimization Checks
+rag_validation:
+  - item: "Sections follow chunking strategy"
+    description: "H2 sections are 300-800 words for optimal RAG retrieval"
+    required: false
+    recommended: true
+
+  - item: "Clear headings for hierarchy"
+    description: "H2 and H3 headings create logical information hierarchy"
+    required: true
+
+  - item: "Glossary terms linked"
+    description: "First use of technical terms links to glossary"
+    required: false
+    recommended: true
+
+  - item: "Code examples tagged properly"
+    description: "Language and framework metadata included for filtering"
+    required: true
+
+# Usage Instructions
+usage_notes: |
+  1. Use this checklist for each module before marking it complete
+  2. "Required" items must pass for publication
+  3. "Recommended" items should pass for quality but are not blocking
+  4. Document any exceptions in module summary chapter
+  5. Re-validate after major edits (changing structure, adding code examples)
+
+  Validation Process:
+  - Module author self-checks against checklist
+  - Peer reviewer validates required items
+  - Automated tests validate build and syntax (CI/CD)
+  - Final review checks all required items before publishing
+
+# Automation Support
+automation:
+  build_validation:
+    - "GitHub Actions workflow: .github/workflows/content-validation.yml"
+    - "Runs on PR creation and updates"
+    - "Validates: Docusaurus build, link checking, MDX syntax"
+
+  syntax_validation:
+    - "Pre-commit hooks for code example linting"
+    - "Tools: pylint (Python), clang-format (C++), yamllint (YAML)"
+
+  schema_validation:
+    - "Frontmatter validated against contracts/module-schema.yaml"
+    - "Tool: ajv-cli or custom validator script"

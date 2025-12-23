@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Social Card for Physical AI & Humanoid Robotics -->
+
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ade80;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.1">
+    <path d="M 0 0 L 1200 0 L 1200 630 L 0 630 Z" fill="none" stroke="#22c55e" stroke-width="1"/>
+    <line x1="0" y1="157.5" x2="1200" y2="157.5" stroke="#22c55e"/>
+    <line x1="0" y1="315" x2="1200" y2="315" stroke="#22c55e"/>
+    <line x1="0" y1="472.5" x2="1200" y2="472.5" stroke="#22c55e"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#22c55e"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#22c55e"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#22c55e"/>
+  </g>
+
+  <!-- Robot (scaled up) -->
+  <g transform="translate(150, 150) scale(1.5)">
+    <!-- Antenna -->
+    <line x1="100" y1="20" x2="100" y2="40" stroke="#2d5016" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="100" cy="15" r="5" fill="#4ade80"/>
+
+    <!-- Head -->
+    <rect x="70" y="40" width="60" height="50" rx="8" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+
+    <!-- Eyes -->
+    <circle cx="85" cy="60" r="6" fill="#ffffff"/>
+    <circle cx="115" cy="60" r="6" fill="#ffffff"/>
+    <circle cx="85" cy="60" r="3" fill="#1e293b"/>
+    <circle cx="115" cy="60" r="3" fill="#1e293b"/>
+
+    <!-- Mouth -->
+    <rect x="80" y="75" width="40" height="8" rx="4" fill="#86efac" stroke="#16a34a" stroke-width="1"/>
+
+    <!-- Body -->
+    <rect x="60" y="95" width="80" height="70" rx="10" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+
+    <!-- Chest Panel -->
+    <rect x="75" y="105" width="50" height="40" rx="5" fill="#86efac" stroke="#16a34a" stroke-width="1"/>
+
+    <!-- Control Buttons -->
+    <circle cx="90" cy="118" r="4" fill="#4ade80"/>
+    <circle cx="100" cy="118" r="4" fill="#4ade80"/>
+    <circle cx="110" cy="118" r="4" fill="#4ade80"/>
+
+    <!-- Display Lines -->
+    <line x1="80" y1="130" x2="120" y2="130" stroke="#16a34a" stroke-width="2"/>
+    <line x1="80" y1="137" x2="115" y2="137" stroke="#16a34a" stroke-width="2"/>
+
+    <!-- Arms -->
+    <rect x="40" y="100" width="15" height="50" rx="7" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <rect x="145" y="100" width="15" height="50" rx="7" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+
+    <!-- Hands -->
+    <circle cx="47" cy="155" r="8" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+    <circle cx="152" cy="155" r="8" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+
+    <!-- Legs -->
+    <rect x="70" y="165" width="20" height="25" rx="5" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <rect x="110" y="165" width="20" height="25" rx="5" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+
+    <!-- Feet -->
+    <ellipse cx="80" cy="192" rx="12" ry="6" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+    <ellipse cx="120" cy="192" rx="12" ry="6" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+  </g>
+
+  <!-- Title -->
+  <text x="550" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#accentGradient)">
+    Physical AI &
+  </text>
+  <text x="550" y="280" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#accentGradient)">
+    Humanoid Robotics
+  </text>
+
+  <!-- Subtitle -->
+  <text x="550" y="360" font-family="Arial, sans-serif" font-size="36" fill="#94a3b8">
+    A Comprehensive Guide to Building
+  </text>
+  <text x="550" y="410" font-family="Arial, sans-serif" font-size="36" fill="#94a3b8">
+    Autonomous Humanoid Robots
+  </text>
+
+  <!-- Module highlights -->
+  <g transform="translate(550, 450)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#4ade80" font-weight="600">
+      ✓ ROS 2 Foundation
+    </text>
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="24" fill="#4ade80" font-weight="600">
+      ✓ Digital Twin & Simulation
+    </text>
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="24" fill="#4ade80" font-weight="600">
+      ✓ AI Brain & Decision Making
+    </text>
+    <text x="450" y="0" font-family="Arial, sans-serif" font-size="24" fill="#4ade80" font-weight="600">
+      ✓ Vision-Language-Action
+    </text>
+  </g>
+
+  <!-- Accent line -->
+  <rect x="550" y="320" width="600" height="4" fill="url(#accentGradient)" opacity="0.6"/>
+</svg>

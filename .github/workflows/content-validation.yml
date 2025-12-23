@@ -1,0 +1,45 @@
+name: Content Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate build
+        run: npm run build
+
+      - name: Check for broken links
+        run: |
+          echo "Link checking would be implemented in production"
+          # Future: Add markdown-link-check or similar tool
+
+      - name: Validate MDX syntax
+        run: |
+          echo "MDX syntax validation would be implemented in production"
+          # Future: Add MDX linter or custom validation script
+
+      - name: Check frontmatter
+        run: |
+          echo "Frontmatter validation would be implemented in production"
+          # Future: Add YAML frontmatter validation script

@@ -1,0 +1,114 @@
+# Module Frontmatter JSON Schema
+# Validates frontmatter in chapter MDX files
+
+$schema: "http://json-schema.org/draft-07/schema#"
+title: "Chapter Frontmatter Schema"
+description: "Validation schema for chapter frontmatter in Physical AI & Humanoid Robotics book"
+
+type: object
+required:
+  - id
+  - title
+  - sidebar_label
+  - sidebar_position
+  - description
+  - keywords
+
+properties:
+  id:
+    type: string
+    description: "Unique identifier matching file path (without .md extension)"
+    pattern: "^module-0[1-4]-[a-z0-9-]+/[0-9]{2}-[a-z0-9-]+$"
+    examples:
+      - "module-01-ros2/01-overview"
+      - "module-02-digital-twin/03-tooling"
+
+  title:
+    type: string
+    description: "Full chapter title displayed on page"
+    minLength: 5
+    maxLength: 80
+    examples:
+      - "Understanding ROS 2 Nodes"
+      - "System Architecture & Data Flow"
+
+  sidebar_label:
+    type: string
+    description: "Short label for sidebar navigation"
+    minLength: 3
+    maxLength: 30
+    examples:
+      - "ROS 2 Nodes"
+      - "Architecture"
+
+  sidebar_position:
+    type: integer
+    description: "Order within module (1-6)"
+    minimum: 1
+    maximum: 6
+
+  description:
+    type: string
+    description: "SEO and RAG-friendly description"
+    minLength: 120
+    maxLength: 160
+    examples:
+      - "Learn how ROS 2 nodes communicate using topics, services, and actions. Understand the publish-subscribe pattern and node lifecycle management."
+
+  keywords:
+    type: array
+    description: "Search keywords for SEO and RAG"
+    minItems: 3
+    maxItems: 7
+    items:
+      type: string
+      minLength: 2
+      maxLength: 30
+    examples:
+      - ["ros2", "nodes", "topics", "services", "rclpy"]
+      - ["simulation", "gazebo", "physics", "sensors"]
+
+  prerequisites:
+    type: array
+    description: "Optional: Required prior knowledge"
+    items:
+      type: string
+    examples:
+      - ["Basic Python programming", "Understanding of pub-sub pattern"]
+
+  estimatedTime:
+    type: string
+    description: "Optional: Estimated reading/completion time"
+    pattern: "^[0-9]+-[0-9]+ (minutes|hours)$"
+    examples:
+      - "60-90 minutes"
+      - "1-2 hours"
+
+  tags:
+    type: array
+    description: "Optional: Content tags"
+    items:
+      type: string
+    examples:
+      - ["beginner", "foundational"]
+      - ["advanced", "integration"]
+
+additionalProperties: false
+
+# Example valid frontmatter:
+# ---
+# id: module-01-ros2/01-overview
+# title: Understanding ROS 2 Nodes and Communication
+# sidebar_label: ROS 2 Nodes
+# sidebar_position: 1
+# description: Learn how ROS 2 nodes communicate using topics, services, and actions. Understand the publish-subscribe pattern and node lifecycle management.
+# keywords:
+#   - ros2
+#   - nodes
+#   - topics
+#   - services
+#   - rclpy
+# prerequisites:
+#   - Basic Python programming
+# estimatedTime: 60-90 minutes
+# ---

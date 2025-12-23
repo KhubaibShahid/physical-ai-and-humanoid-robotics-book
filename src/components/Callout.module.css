@@ -1,0 +1,113 @@
+.callout {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid;
+  border-radius: 4px;
+  background: var(--ifm-background-surface-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.content p:first-child {
+  margin-top: 0;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Info variant (blue) */
+.info {
+  border-left-color: var(--ifm-color-info);
+  background: var(--ifm-alert-background-color);
+}
+
+.info .title {
+  color: var(--ifm-color-info-dark);
+}
+
+/* Warning variant (yellow/orange) */
+.warning {
+  border-left-color: var(--ifm-color-warning);
+  background: var(--ifm-alert-background-color-warning);
+}
+
+.warning .title {
+  color: var(--ifm-color-warning-dark);
+}
+
+/* Tip variant (green) */
+.tip {
+  border-left-color: var(--ifm-color-success);
+  background: var(--ifm-alert-background-color-success);
+}
+
+.tip .title {
+  color: var(--ifm-color-success-dark);
+}
+
+/* Danger variant (red) */
+.danger {
+  border-left-color: var(--ifm-color-danger);
+  background: var(--ifm-alert-background-color-danger);
+}
+
+.danger .title {
+  color: var(--ifm-color-danger-dark);
+}
+
+/* Success variant (green, lighter than tip) */
+.success {
+  border-left-color: #00a86b;
+  background: rgba(0, 168, 107, 0.1);
+}
+
+.success .title {
+  color: #006644;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .callout {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .info {
+  background: rgba(84, 199, 236, 0.1);
+}
+
+[data-theme='dark'] .warning {
+  background: rgba(255, 186, 0, 0.1);
+}
+
+[data-theme='dark'] .tip {
+  background: rgba(0, 200, 83, 0.1);
+}
+
+[data-theme='dark'] .danger {
+  background: rgba(250, 56, 62, 0.1);
+}
+
+[data-theme='dark'] .success {
+  background: rgba(0, 168, 107, 0.1);
+}

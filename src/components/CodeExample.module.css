@@ -1,0 +1,96 @@
+.codeExample {
+  margin: 1.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ifm-code-background);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.filename {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+  padding: 0.25rem 0.5rem;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+}
+
+.language {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  background: var(--ifm-color-primary-lightest);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.copyButton {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.copyButton:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+.copyButton:active {
+  transform: scale(0.98);
+}
+
+.description {
+  padding: 0.75rem 1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.codeContainer {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.codeContainer pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.codeContainer code {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}

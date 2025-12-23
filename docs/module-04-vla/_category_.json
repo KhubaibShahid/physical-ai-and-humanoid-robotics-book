@@ -1,0 +1,10 @@
+{
+  "label": "Module 4: VLA",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "title": "Module 4: Vision-Language-Action",
+    "description": "Build end-to-end autonomous behavior with vision-language-action models. Integrate voice commands, LLM planning, and robotic execution in a capstone humanoid project.",
+    "keywords": ["vla", "llm", "voice-control", "autonomous", "capstone"]
+  }
+}

@@ -208,3 +208,11 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Docusaurus v3.x (Node.js 18+), MDX v2.x (001-physical-ai-humanoid-robotics-book)
+- JavaScript/TypeScript, Node.js 18+, Docusaurus v3.x + Docusaurus framework, React, MDX v2.x, Node.js package ecosystem (002-docusaurus-home-page)
+- N/A (static site, no persistent storage needed for home page) (002-docusaurus-home-page)
+
+## Recent Changes
+- 001-physical-ai-humanoid-robotics-book: Added Docusaurus v3.x (Node.js 18+), MDX v2.x

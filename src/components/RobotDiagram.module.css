@@ -1,0 +1,49 @@
+.robotDiagram {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.25rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+}
+
+.diagramContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: var(--ifm-background-color);
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.diagramContainer svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.diagramContainer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.caption {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  text-align: center;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}

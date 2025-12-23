@@ -1,0 +1,10 @@
+{
+  "label": "Module 3: AI Brain",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Module 3: AI-Robot Brain (NVIDIA Isaac)",
+    "description": "Understand AI-driven autonomy with NVIDIA Isaac. Explore perception pipelines, visual SLAM, navigation algorithms, and path planning for intelligent robots.",
+    "keywords": ["nvidia-isaac", "perception", "slam", "navigation", "ai"]
+  }
+}
